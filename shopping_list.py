@@ -14,7 +14,11 @@ def show_list():
 
 
 def remove_from_list(item):
-    shopping_list.remove(item)
+    # shopping_list.remove(item.lower())
+    for i in range(len(shopping_list)):
+        if shopping_list[i].lower() == item.lower():
+            del shopping_list[i]
+            break
     print("Removed! Your list has {} items".format(len(shopping_list)))
 
 
